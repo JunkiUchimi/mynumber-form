@@ -1,0 +1,15 @@
+{
+    "port": 8080,
+    "baseDir": "",
+    "paths": {
+      "offistaClass": "./src/class/Offista.js",
+      "mynumberUtils": "./src/class/Mynumber_offista_utils.js",
+      "preinfoDbClass": "./src/class/Preinfo_db.js",
+      "preinfoDb": "./src/db/preinfo.db",
+      "offistaConfig": "./private/offista_config.json",
+      "updateMyNumberClass": "./src/class/updateMyNumber.js"
+
+    },
+    "dbResetPassword": "DBのリセットpassword"
+  }
+  

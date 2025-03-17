@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>マイナンバー入力フォーム</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h2 class="mb-4 text-center">マイナンバー入力フォーム</h2>
+    <div id="liveAlertPlaceholder"></div>
+    <form name="mynumber" id="mynumber-submitForm">
+      <input type="hidden" name="app_name" value="mynumber_submit" />
+
+      <div class="form-group row border-bottom mb-3 pb-3">
+        <label for="uuid" class="col-sm-3 col-form-label">フォームID</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="uuid" id="uuid" value="<%= uuid %>" required readonly />
+        </div>
+      </div>
+
+      <!-- 事前入力情報 -->
+      <div class="form-group row border-bottom mb-3 pb-3">
+        <label class="col-sm-3 col-form-label">事前入力情報</label>
+        <div class="col-sm-9">
+          <!-- 企業名 -->
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">企業名</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="companyName" id="companyName" value="<%= companyName %>"
+                required readonly />
+            </div>
+          </div>
+
+          <!-- 社員番号 -->
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">社員番号</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="employeeNumber" id="employeeNumber"
+                value="<%= employeeNumber %>" required readonly />
+            </div>
+          </div>
+
+          <!-- 氏名 -->
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">氏名</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="name" id="name" value="<%= name %>" required readonly />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row border-bottom mb-3 pb-3">
+        <label for="mynumber" class="col-sm-3 col-form-label">マイナンバー</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="mynumber" id="mynumber" placeholder="マイナンバーを入力してください"
+            required />
+            <div id="mynumberError" class="invalid-feedback"></div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary mx-auto">
+          提出する
+        </button>
+      </div>
+    </form>
+
+    <!-- モーダル -->
+    <div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="modal-url-display">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">マイナンバーの本提出が完了しました。</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <script src="js/submit.js"></script>
+</body>
+</html>

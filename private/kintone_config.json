@@ -1,0 +1,33 @@
+{
+  "host_url": "https://nkr-group.cybozu.com",
+  "ids": {
+    "無料版": {
+      "3744": {
+        "name": "NKRFSV2.8（999）従業員基本情報",
+        "relationship": "本人",
+        "api_token": "gZ3X52cXyTCDDJdaITD6ZM0tkEQWo0TBJ4DexFh2",
+        "guest": null
+      },
+      "3743": {
+        "name": "NKRFSV2.8（999）家族情報",
+        "relationship": "家族",
+        "api_token": "5njsjmRl3ELAml6OIvP8cBPTQgoA5q4VdjhDJQPI",
+        "guest": null
+      }
+   },
+    "有料版": {
+      "3202": {
+        "name": "NKRFSV2.8 従業員基本情報",
+        "relationship": "本人",
+        "api_token": "hBnf5TPbs3lfd8NRz3yjsTsnAfUBsuhBm1kJxlDx",
+        "guest": null
+      },
+      "3187": {
+        "name": "NKRFSV2.8 家族情報",
+        "relationship": "家族",
+        "api_token": "cdb7idCpTiLgdcEI1SCoEll436mZklaFHVIrnhFM",
+        "guest": null
+      }
+   }
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>マイナンバー提出フォーム</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/preprocess.css" />
+</head>
+
+<body>
+  <div class="container mt-3">
+    <h2 class="mb-4 text-center">マイナンバー提出フォーム</h2>
+    <div id="liveAlertPlaceholder"></div>
+    <form id="mynumber-preprocessForm">
+      <input type="hidden" name="app_name" value="mynumber_pre" />
+      <div class="form-group mb-3 pb-3 border-bottom">
+        <label for="companyName">会社名</label>
+        <input type="text" class="form-control" name="companyName" placeholder="会社名を入力してください" required="true" value="<%= companyName %>" />
+      </div>
+      <div class="form-group mb-3 pb-3 border-bottom">
+        <label for="employeeNumber">従業員番号</label>
+        <input type="text" class="form-control" name="employeeNumber" placeholder="従業員番号を入力してください" required="true" value="<%= employeeNumber %>" />
+      </div>
+      <div class="form-group mb-3 pb-3 border-bottom">
+        <label for="employeeName_last">対象者 姓</label>
+        <input type="text" class="form-control" name="employeeName_last" placeholder="対象者の姓を入力してください" required="true" value="<%= employeeName_last %>" />
+      </div>
+      <div class="form-group mb-3 pb-3 border-bottom">
+        <label for="employeeName_first">対象者 名</label>
+        <input type="text" class="form-control" name="employeeName_first" placeholder="対象者の名を入力してください"
+          required="true" value="<%= employeeName_first %>" />
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary mx-auto">
+          提出する
+        </button>
+      </div>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="modal-url-display">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="submit-modal-title">マイナンバー本提出用リンク</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="url-display"></p>
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-primary" onclick="copyText(this)">
+              コピー
+            </button> -->
+            <button type="button" class="btn btn-success" onclick="openLink()">
+              開く
+            </button>
+            <!-- <button type="button" class="btn btn-info" onclick="shareLink()">
+              共有
+            </button> -->
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script src="js/preprocess.js"></script>
+</body>
+</html>

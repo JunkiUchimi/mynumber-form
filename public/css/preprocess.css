@@ -1,0 +1,6 @@
+/* preprocess.css */
+.btn-disabled {
+    background-color: #7d7f81;
+    border-color: #7d7f81;
+    cursor: not-allowed;
+}
